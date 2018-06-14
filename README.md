@@ -19,6 +19,11 @@ if __name__ == "__main__":
         time.sleep(1)
 ```
 
+This will generate something like:
+```
+Task A took 1.003875
+```
+
 The timer can also be disabled by setting the `enable` flag in the constructor to `False` like so:
 
 ```python
