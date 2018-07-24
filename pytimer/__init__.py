@@ -1,5 +1,6 @@
 import time
 
+
 class PyTimer(object):
     """ PyTimer is a simple object that implements the `__enter__` and
         `__exit__` methods to satisfy the `wait` interface.
@@ -9,19 +10,19 @@ class PyTimer(object):
         arbitrary code chunks.
     """
 
-    start   = None                  #  Start time
-    end     = None                  #  End time
-    enabled = True                  #  Timer enabled / disabled switch
-    prefix  = ""                    #  Timer prefix to print on exit
+    start   = None                  # Start time
+    end     = None                  # End time
+    enabled = True                  # Timer enabled / disabled switch
+    prefix  = ""                    # Timer prefix to print on exit
 
     def __init__(self, prefix="", enabled=True):
         """ Construct the timer.  The timer is enabled by default and
             uses an empty prefix.  These can be user overridden.
         """
         self.enabled = enabled
-        self.prefix  = ""
+        self.prefix = ""
         if prefix:
-            self.prefix  = prefix
+            self.prefix = prefix
 
     def __enter__(self):
         """ Record the time when the `with` scope is entered.
